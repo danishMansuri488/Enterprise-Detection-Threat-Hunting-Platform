@@ -1,1 +1,4 @@
-
+Event
+| where EventID == 22
+| project TimeGenerated, Computer, Image, QueryName, QueryStatus, User
+| sort by TimeGenerated desc
