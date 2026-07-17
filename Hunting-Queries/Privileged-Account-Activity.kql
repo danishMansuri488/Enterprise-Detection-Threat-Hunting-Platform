@@ -1,1 +1,6 @@
-
+SecurityEvent
+| where EventID == 4624
+| where AccountType == "User"
+| where Account has_any ("Administrator", "Admin")
+| project TimeGenerated, Computer, Account, LogonType, IpAddress
+| sort by TimeGenerated desc
