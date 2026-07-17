@@ -1,1 +1,4 @@
-
+Event
+| where EventID in (12, 13)
+| project TimeGenerated, Computer, EventID, Image, TargetObject, User
+| sort by TimeGenerated desc
