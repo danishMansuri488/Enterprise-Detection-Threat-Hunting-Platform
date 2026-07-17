@@ -1,1 +1,4 @@
-
+Event
+| where EventID == 11
+| project TimeGenerated, Computer, Image, TargetFilename, User
+| sort by TimeGenerated desc
