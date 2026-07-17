@@ -1,1 +1,4 @@
-
+Event
+| where EventID == 1
+| project TimeGenerated, Computer, Process, CommandLine, ParentProcessName, User
+| sort by TimeGenerated desc
