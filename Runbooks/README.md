@@ -1,25 +1,19 @@
+# Runbooks
 
-# SOC Investigation Runbooks
-
-This directory contains standardized investigation runbooks for security detections implemented in the Enterprise Detection & Threat Hunting Platform.
-
-Each runbook provides a structured incident response workflow to help SOC analysts investigate, contain, and remediate specific security events.
+This directory contains incident response runbooks used during security investigations in the Enterprise Detection & Threat Hunting Platform.
 
 ## Available Runbooks
 
-- Failed Logon
-- Account Lockout
-- Suspicious Process Creation
-- Suspicious Network Connection
-- DNS Query Monitoring
-- Registry Activity
-- Privileged Account Activity
+| Runbook | Purpose |
+|----------|---------|
+| Failed-Logon-Runbook.md | Investigate failed authentication attempts and potential brute-force activity. |
+| Account-Lockout-Runbook.md | Investigate user account lockout events. |
+| Privileged-Account-Runbook.md | Investigate privileged account logon activity. |
+| Suspicious-Process-Runbook.md | Investigate suspicious process creation events. |
+| Suspicious-Network-Runbook.md | Investigate suspicious network connections. |
+| DNS-Query-Runbook.md | Investigate suspicious DNS queries. |
+| Registry-Activity-Runbook.md | Investigate suspicious Windows Registry modifications. |
 
-Each runbook includes:
+## Objective
 
-- Detection Overview
-- Investigation Steps
-- Evidence Collection
-- Containment
-- Recovery
-- Lessons Learned
+These runbooks provide a structured investigation workflow, helping analysts perform consistent triage, evidence collection, containment, recovery, and documentation during security incidents.
