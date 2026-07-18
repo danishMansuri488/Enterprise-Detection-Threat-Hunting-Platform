@@ -1,21 +1,15 @@
-# MITRE ATT&CK Mapping
+# Metrics
 
-## Overview
+This directory documents key security metrics that help measure the effectiveness of detection, monitoring, and incident response activities within the Enterprise Detection & Threat Hunting Platform.
 
-This document maps the implemented Microsoft Sentinel detections and threat hunting queries to the MITRE ATT&CK framework.
+## Metrics Included
 
-| Detection | MITRE Tactic | MITRE Technique | Status |
-|----------|--------------|-----------------|--------|
-| Failed Logon Detection | Credential Access | T1110 - Brute Force | Implemented |
-| Successful Logon Monitoring | Initial Access | T1078 - Valid Accounts | Implemented |
-| Account Lockout Detection | Credential Access | T1110 - Brute Force | Implemented |
-| Suspicious Process Creation | Execution | T1059 - Command and Scripting Interpreter | Implemented |
-| Suspicious Network Connection | Command and Control | T1071 - Application Layer Protocol | Implemented |
-| DNS Query Monitoring | Command and Control | T1071.004 - DNS | Implemented |
-| File Creation Monitoring | Collection | T1005 - Data from Local System | Implemented |
-| Registry Activity Monitoring | Persistence | T1112 - Modify Registry | Implemented |
-| Privileged Account Activity | Privilege Escalation | T1078 - Valid Accounts | Implemented |
+- Authentication Monitoring
+- Detection Coverage
+- Alert Generation
+- Incident Tracking
+- Threat Hunting Activity
 
-## Summary
+## Purpose
 
-The implemented detections are aligned with the MITRE ATT&CK framework to provide standardized detection coverage and improve investigation workflows.
+Security metrics provide visibility into the overall health of the monitoring environment, support continuous improvement, and help evaluate the effectiveness of detection rules and response processes.
