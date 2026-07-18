@@ -1,44 +1,44 @@
-# Suspicious Process Creation Investigation Runbook
+# Suspicious Network Connection Investigation Runbook
 
 ## Purpose
 
-Investigate suspicious process creation events that may indicate malicious execution, command-line abuse, or attacker activity.
+Investigate suspicious outbound or inbound network connections that may indicate command-and-control (C2) communication, lateral movement, or unauthorized network activity.
 
 ## Detection Source
 
 - Microsoft Sentinel
-- Sysmon Event ID: 1
+- Sysmon Event ID: 3
 
 ## Investigation Steps
 
 1. Review the Microsoft Sentinel alert.
-2. Identify the process name and full command line.
-3. Verify the parent process.
-4. Determine which user executed the process.
-5. Check whether the process is legitimate or suspicious.
-6. Correlate with related Sysmon and Windows Security Events.
+2. Identify the source computer and user.
+3. Examine the destination IP address and port.
+4. Verify the process responsible for the connection.
+5. Determine whether the destination is trusted.
+6. Correlate with related process creation and authentication events.
 
 ## Evidence Collection
 
-- Sysmon Event ID 1
+- Sysmon Event ID 3
+- Source Computer
+- Destination IP
+- Destination Port
 - Process Name
-- Command Line
-- Parent Process
 - User Account
-- Host Information
 
 ## Containment
 
-- Terminate malicious processes.
-- Isolate the affected endpoint if necessary.
-- Block malicious executables.
+- Block malicious IP addresses.
+- Isolate affected systems if compromise is confirmed.
+- Terminate malicious network activity.
 
 ## Recovery
 
-- Remove malicious files.
-- Perform endpoint malware scanning.
-- Verify that no unauthorized processes remain.
+- Remove malicious software.
+- Restore normal network connectivity.
+- Verify no additional suspicious connections exist.
 
 ## Lessons Learned
 
-Update detection rules and investigation procedures based on findings.
+Review firewall rules, network monitoring, and detection logic to improve future visibility.
