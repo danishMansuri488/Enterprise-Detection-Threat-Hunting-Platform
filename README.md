@@ -217,14 +217,12 @@ The repository includes screenshots demonstrating:
 ```text
 Enterprise-Detection-Threat-Hunting-Platform
 │
-├── analytics-rules/
+├── Analytics-rules/
 ├── architecture/
-├── detections/
-├── docs/
-├── hunting-queries/
-├── runbooks/
-├── screenshots/
-├── workbooks/
+├── Detections/
+├── Hunting-queries/
+├── Runbooks/
+├── Screenshots/
 │
 ├── README.md
 ├── CHANGELOG.md
